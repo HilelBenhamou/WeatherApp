@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YourWeather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body style="background-color:red;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="">YourWeather</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+    </div>
+  </div>
+</nav>
+<div style="display:flex; flex-direction: column; ">
+    <h1 style="align-self:center;">Welcome To YourWeather</h1><br>
+    <form method="post" style="align-self:center;">
+        {% csrf_token %}
+        <h5>{{ form }}</h5>
+        <button type="submit" class="btn btn-success" style="background-color:#00FA9A;">See</button>
+    </form>
+</div>
+<br><br>
+<div style="display:flex; justify-content:center;">
+    {% block city_block %}{% endblock %}
+</div>
+
+
+</body>
+</html>

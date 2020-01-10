@@ -1,0 +1,13 @@
+{% extends 'get_weather/home.html' %}
+
+{% block city_block %}
+<div class="card" style="width: 30rem;">
+  <div class="card-body">
+      <h2 class="card-title"><span style="color:#00FA9A;">City:</span> {{ location_name }}</h2>
+    <h4 class="card-text"><span style="color:#00FA9A;">Temperature:</span> {{ temperature }}</h4>
+    <h4 class="card-text"><span style="color:#00FA9A;">Winspeed:</span> {{ windspeed }}</h4>
+    <h4 class="card-text"><span style="color:#00FA9A;">Probability of precipitation:</span> {{ probability }}</h4>
+    <h4 class="card-text"><span style="color:#00FA9A;">Descriptions:</span> {{ description }}</h4>
+  </div>
+</div>
+{% endblock %}
